@@ -9,7 +9,6 @@ namespace DBA.FreshdeskSharp.Models
         public FreshdeskTicketBase()
         {
             Attachments = new List<object>();
-            CcEmails = new List<string>();
             ToEmails = new List<string>();
             FwdEmails = new List<string>();
             ReplyCcEmails = new List<string>();
@@ -21,8 +20,6 @@ namespace DBA.FreshdeskSharp.Models
 
         public bool Deleted { get; set; }
         public List<object> Attachments { get; }
-        [JsonProperty("cc_emails")]
-        public List<string> CcEmails { get; }
         [JsonProperty("fwd_emails")]
         public List<string> FwdEmails { get; }
         [JsonProperty("reply_cc_emails")]

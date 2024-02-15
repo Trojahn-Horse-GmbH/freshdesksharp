@@ -1,33 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.6.1;net48</TargetFrameworks>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <TargetFrameworks>net6.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Greg Cobb</Authors>
-    <Company>DBA Software, Inc.</Company>
+    <Authors>Greg Cobb, Paul Schrieber</Authors>
+    <Company>Trojahn-Horse GmbH</Company>
     <Description>Wrapper for Freshdesk API v2</Description>
-    <PackageProjectUrl>https://github.com/dbasoftware/freshdesksharp/</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/dbasoftware/freshdesksharp/</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>freshdesk</PackageTags>
-    <Version>0.3.0</Version>
-    <PackageLicenseUrl>https://github.com/dbasoftware/freshdesksharp/blob/master/LICENSE</PackageLicenseUrl>
+    <Version>0.3.1</Version>
     <PackageId>FreshdeskSharp</PackageId>
     <Product>FreshdeskSharp</Product>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFramework)'=='net48'">
-    <AssemblyTitle>FreshdeskSharp .NET 4.8</AssemblyTitle>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard1.6.1'">
-    <AssemblyTitle>FreshdeskSharp .NET Standard 1.6.1</AssemblyTitle>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System.Net.Http" Condition="'$(TargetFramework)' == 'net48'" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Update="NETStandard.Library" Condition="'$(TargetFramework)' == 'netstandard1.6.1'" Version="1.6.1" />
+    <Reference Include="System.Net.Http"/>
   </ItemGroup>
 </Project>
